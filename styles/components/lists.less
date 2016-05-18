@@ -2,8 +2,7 @@
 @import "ui-mixins.less";
 @import "octicon-mixins";
 
-.list-group,
-.list-tree {
+.list-group, .list-tree {
   li .character-match {
     .text(normal);
     transition: color @transition-time/2 ease;
@@ -27,18 +26,15 @@
     color: @text-color-selected !important;
   }
 
-  li,
-  li.list-item {
+  li, li.list-item {
     transition: color @transition-time/2 ease;
   }
 
-  li:hover,
-  li.list-item:hover {
+  li:hover, li.list-item:hover {
     .text(highlight);
   }
 
-  li:not(.list-nested-item),
-  li.list-nested-item > .list-item {
+  li:not(.list-nested-item), li.list-nested-item > .list-item {
     .text(normal);
   }
 
@@ -48,6 +44,7 @@
       .text(@class);
     }
   }
+
   .generate-list-item-text-color(subtle);
   .generate-list-item-text-color(info);
   .generate-list-item-text-color(success);
@@ -66,21 +63,20 @@
       color: @color;
     }
   }
+
   .generate-list-item-status-color(@text-color-subtle, ignored);
   .generate-list-item-status-color(@text-color-added, added);
   .generate-list-item-status-color(@text-color-renamed, renamed);
   .generate-list-item-status-color(@text-color-modified, modified);
   .generate-list-item-status-color(@text-color-removed, removed);
 
-  li:not(.list-nested-item).selected,
-  li.list-nested-item.selected > .list-item {
+  li:not(.list-nested-item).selected, li.list-nested-item.selected > .list-item {
     .text(selected);
     font-size: @font-size
   }
 }
 
-.select-list ol.list-group,
-&.select-list ol.list-group {
+.select-list ol.list-group, &.select-list ol.list-group {
   li pre {
     margin-bottom: 0;
   }
@@ -163,8 +159,7 @@
   }
 }
 
-li.ui-draggable-dragging,
-li.ui-sortable-helper {
+li.ui-draggable-dragging, li.ui-sortable-helper {
   line-height: @component-line-height;
   height: @component-line-height;
   list-style: none;

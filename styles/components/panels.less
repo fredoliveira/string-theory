@@ -10,6 +10,7 @@ atom-panel {
     background: @app-background-color;
     border-top: 1px solid @tool-panel-border-color;
   }
+
   &.bottom > *:not(:empty) {
     background: @app-background-color;
     padding-top: @component-padding/2;
@@ -32,20 +33,16 @@ atom-panel-container {
   }
 }
 
-atom-pane-container atom-pane .item-views,
-atom-panel-container,
-.pane-item {
+atom-pane-container atom-pane .item-views, atom-panel-container, .pane-item {
   background: @app-background-color;
   border: 0;
 }
 
-.focusable-panel,
-.item-views .focusable-panel {
+.focusable-panel, .item-views .focusable-panel {
   padding: @component-padding;
 }
 
-.inset-panel .panel-heading,
-.panel-heading {
+.inset-panel .panel-heading, .panel-heading {
   .text(heading);
   font-size: 24px;
   border-radius: 0;

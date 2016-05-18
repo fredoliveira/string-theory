@@ -4,7 +4,7 @@
 
 atom-text-editor, atom-text-editor::shadow, :host {
   .scroll-view {
-    padding: 0;
+    padding: 0px;
   }
 
   .indent-guide {
@@ -39,12 +39,20 @@ atom-text-editor, atom-text-editor::shadow, :host {
     font-weight: 300;
     background-color: @gutter-background-color;
 
+    // TODO: make this a configuration option
+    // background-color: @theme-background-color-dark;
+    //
+    // &:last-child {
+    //   border-right: 1px solid darken(@tool-panel-border-color, 3%);
+    //   margin-right: 5px;
+    // }
+
     .line-numbers {
-      background: @theme-background-color-dark;
+      background: transparent;
     }
 
     .line-number {
-      background: transparent; // @theme-background-color-dark;
+      background: transparent;
       opacity: 1.0;
       color: @gutter-text-color;
       border-left: 2px solid transparent;
@@ -54,8 +62,7 @@ atom-text-editor, atom-text-editor::shadow, :host {
         color: mix(@syntax-background-color, @text-color-added, 48%);
         border-left-color: mix(@syntax-background-color, @text-color-added, 48%);
 
-        &.cursor-line,
-        &.cursor-line-no-selection {
+        &.cursor-line, &.cursor-line-no-selection {
           color: @text-color-added;
           border-left-color: @text-color-added;
         }
@@ -65,8 +72,7 @@ atom-text-editor, atom-text-editor::shadow, :host {
         color: mix(@syntax-background-color, @text-color-modified, 48%);
         border-left-color: mix(@syntax-background-color, @text-color-modified, 48%);
 
-        &.cursor-line,
-        &.cursor-line-no-selection {
+        &.cursor-line, &.cursor-line-no-selection {
           color: @text-color-modified;
           border-left-color: @text-color-modified;
         }
@@ -76,8 +82,7 @@ atom-text-editor, atom-text-editor::shadow, :host {
         color: mix(@syntax-background-color, @text-color-removed, 48%);
         border-left-color: mix(@syntax-background-color, @text-color-removed, 48%);
 
-        &.cursor-line,
-        &.cursor-line-no-selection {
+        &.cursor-line, &.cursor-line-no-selection {
           color: @text-color-removed;
           border-left-color: @text-color-removed;
         }
@@ -104,15 +109,12 @@ atom-text-editor, atom-text-editor::shadow, :host {
     }
   }
 
-  .gutter .line-number.folded,
-  .gutter .line-number.folded .icon-right,
-  .gutter .line-number:after {
+  .gutter .line-number.folded, .gutter .line-number.folded .icon-right, .gutter .line-number:after {
     color: mix(@syntax-background-color, @text-color-info, 48%);
     border-left-color: mix(@syntax-background-color, @text-color-info, 48%);
   }
 
-  .gutter .line-number.folded.cursor-line,
-  .gutter .line-number.folded.cursor-line-no-selection {
+  .gutter .line-number.folded.cursor-line, .gutter .line-number.folded.cursor-line-no-selection {
     color: @text-color-info;
     border-left-color: @text-color-info;
 

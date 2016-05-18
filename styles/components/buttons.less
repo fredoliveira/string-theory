@@ -2,15 +2,12 @@
 @import "ui-mixins.less";
 @import "octicon-mixins";
 
-// Buttons ---------------------------------------------------------------------
-button,
-button.icon,
-.btn-default,
-.btn {
+// Buttons
+
+button, button.icon, .btn-default, .btn {
   .button(@button-border-color);
 
-  &:focus,
-  &:active:focus {
+  &:focus, &:active:focus {
     outline: 0;
     border: 1px solid @text-color-selected !important;
   }
@@ -72,7 +69,8 @@ button.icon,
   }
 }
 
-// Mixins ----------------------------------------------------------------------
+// Button Mixins
+
 .button(@color) {
   color: @text-color;
   font-size: 12px;
@@ -92,15 +90,13 @@ button.icon,
     outline: none;
   }
 
-  &:focus,
-  &:hover {
+  &:focus, &:hover {
     color: @base-background-color !important;
     background: @color !important;
     border-color: @color !important;
   }
 
-  &:active,
-  &:active:focus {
+  &:active, &:active:focus {
     color: @base-background-color;
     background: @color;
     border: 1px solid @text-color-selected !important;
@@ -118,8 +114,7 @@ button.icon,
     }
   }
 
-  &[disabled],
-  &.disabled {
+  &[disabled], &.disabled {
     opacity: 1;
     background-color: transparent !important;
     border-color: transparent !important;
@@ -142,8 +137,7 @@ button.icon,
     background: @color !important;
   }
 
-  &[disabled],
-  &.disabled {
+  &[disabled], &.disabled {
     opacity: 1;
     background-color: transparent !important;
     border-color: transparent !important;

@@ -2,8 +2,7 @@
 @import "ui-mixins.less";
 @import "octicon-mixins";
 
-atom-panel.modal,
-.overlay {
+atom-panel.modal, .overlay {
   .overlay-shadow();
   .text(normal);
   background-color: @overlay-background-color;
@@ -26,10 +25,7 @@ atom-panel.modal,
     .text(light);
   }
 
-  atom-text-editor[mini],
-  atom-text-editor.mini,
-  atom-text-editor.mini::shadow,
-  atom-text-editor[mini]::shadow {
+  atom-text-editor[mini], atom-text-editor.mini, atom-text-editor.mini::shadow, atom-text-editor[mini]::shadow {
     .text(heading);
     color: @text-color-highlight;
     font-size: 24px;
@@ -43,8 +39,7 @@ atom-panel.modal,
     border-radius: 0;
     border-bottom: 1px solid @base-border-color;
 
-    &.is-focused:hover,
-    &:hover {
+    &.is-focused:hover, &:hover {
       border-top: 0 !important;
       border-left: 0 !important;
       border-right: 0 !important;
@@ -57,17 +52,14 @@ atom-panel.modal,
     top: 20vh;
   }
 
-  .loading,
-  .error-message {
+  .loading, .error-message {
     .text(subtle);
     height: @component-line-height + @component-padding;
     line-height: @component-line-height + @component-padding;
     padding-bottom: @component-padding;
   }
 
-  ul.list-group,
-  .select-list ol.list-group,
-  &.select-list ol.list-group {
+  ul.list-group, .select-list ol.list-group, &.select-list ol.list-group {
     margin: 0 -@component-padding*2 -@component-padding;
 
     li .character-match {

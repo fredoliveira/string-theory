@@ -30,9 +30,7 @@
     position: relative;
     transition: all @transition-time ease;
 
-    .status-modified,
-    .status-added,
-    .status-ignored {
+    .status-modified, .status-added, .status-ignored {
       transition: color @transition-time ease, background @transition-time ease;
 
       &:hover {
@@ -59,8 +57,7 @@
     }
   }
 
-  .tab.active,
-  .tab:hover.active {
+  .tab.active, .tab:hover.active {
     color: @text-color-selected;
     background: @tab-background-color-active;
     width: 100%;
@@ -95,8 +92,7 @@
     }
   }
 
-  .tab.active[data-type="MarkdownPreviewView"],
-  .tab.active[data-type="TextEditor"] {
+  .tab.active[data-type="MarkdownPreviewView"], .tab.active[data-type="TextEditor"] {
     color: @syntax-text-color;
     background: @syntax-background-color;
 
@@ -135,7 +131,6 @@
       color: @text-color-highlight;
     }
   }
-
 
   .tab .close-icon {
     top: (@tab-height - 16) / 2;

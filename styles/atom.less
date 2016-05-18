@@ -4,6 +4,7 @@
 
 status-bar {
   .text(subtle);
+
   background: @theme-background-color-dark !important;
   height: @status-bar-height;
   line-height: @component-line-height;
@@ -12,32 +13,18 @@ status-bar {
   & > .flexbox-repaint-hack {
     padding-top: 3px;
   }
-
-  span {
-    font-size: @status-bar-font-size;
-  }
 }
 
-.platform-darwin .close-icon:before {
+.platform-darwin .close-icon:before, .platform-darwin .icon-x:before, .platform-darwin .icon.x:before {
   content: '✕' !important;
 }
 
-.platform-darwin .icon-x:before {
-  content: '✕' !important;
-}
-
-.platform-darwin .icon.x:before {
-  content: '✕' !important;
-}
-
-.project-find,
-.find-and-replace {
+.project-find, .find-and-replace {
   .btn-group-find .btn {
     .button-variant(@text-color-info);
   }
 
-  .btn-group-replace .btn,
-  .btn-group-replace-all .btn, {
+  .btn-group-replace .btn, .btn-group-replace-all .btn, {
     .button-variant(@text-color-warning);
   }
 
@@ -61,6 +48,7 @@ atom-notifications {
       color: fade(@theme-background-color, 50%);
     }
   }
+
   .btn {
     height: 24px !important;
     line-height: 20px !important;
@@ -104,56 +92,13 @@ kbd {
   margin-left: @component-padding/2;
 }
 
-.scrollbars-visible-always {
-  /deep/ ::-webkit-scrollbar {
-    width: 10px;
-    height: 10px;
-  }
-
-  /deep/ ::-webkit-scrollbar-track,
-  /deep/ ::-webkit-scrollbar-corner {
-    background: @scrollbar-track-color;
-  }
-
-  /deep/ ::-webkit-scrollbar-thumb {
-    border-radius: 5px;
-    border: 1px solid @scrollbar-border-color;
-    background: @scrollbar-color;
-    background-clip: content-box;
-
-    &:active,
-    &:hover {
-      border: 1px solid @scrollbar-border-color;
-      background: @scrollbar-color-active;
-    }
-  }
-
-  atom-text-editor,
-  .settings-view {
-    /deep/ ::-webkit-scrollbar-track,
-    /deep/ ::-webkit-scrollbar-corner {
-      background: @base-background-color;
-    }
-
-    /deep/ ::-webkit-scrollbar-thumb {
-      border: 1px solid @base-background-color;
-      background: @scrollbar-color;
-      &:active,
-      &:hover {
-        border: 1px solid @base-background-color;
-      }
-    }
-  }
-}
-
 .well {
   border-radius: @component-border-radius;
 }
 
 // input -----------------------------------------------------------------------
 
-atom-text-editor[mini],
-atom-text-editor[mini]::shadow {
+atom-text-editor[mini], atom-text-editor[mini]::shadow {
   transition: all @transition-time ease;
   color: @text-color-highlight;
   background-color: @input-background-color;
@@ -179,8 +124,7 @@ atom-text-editor[mini]::shadow {
   }
 }
 
-atom-text-editor[mini].is-focused,
-atom-text-editor[mini].is-focused::shadow {
+atom-text-editor[mini].is-focused, atom-text-editor[mini].is-focused::shadow {
   background-color: @input-background-color-active;
 
   &:hover {
@@ -197,8 +141,8 @@ input[type="checkbox"] {
   &:focus {
     box-shadow: none !important;
   }
-  &:before,
-  &:after {
+
+  &:before, &:after {
     background: @base-background-color;
   }
 }
@@ -210,8 +154,7 @@ select.form-control {
   line-height: @input-height;
   text-transform: none;
 
-  &:focus,
-  &:hover {
+  &:focus, &:hover {
    background: @button-border-color !important;
    color: @base-background-color !important;
   }
