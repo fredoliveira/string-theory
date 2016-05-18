@@ -26,7 +26,8 @@
 
 atom-notifications {
   .text(normal);
-  top: 32px;
+  top: 36px;
+  right: 4px;
 
   .close {
     transition: all @transition-time ease;
@@ -37,7 +38,8 @@ atom-notifications {
   }
 
   .btn {
-    height: 24px !important;
+    font-size: 11px !important;
+    height: 22px !important;
     line-height: 20px !important;
 
     &.close-all {
@@ -50,6 +52,10 @@ atom-notifications {
         border-color: fade(@theme-background-color, 0%) !important;
       }
     }
+  }
+
+  atom-notification {
+    margin-bottom: 4px;
   }
 }
 
