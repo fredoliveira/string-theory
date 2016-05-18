@@ -2,9 +2,7 @@
 @import "ui-mixins.less";
 @import "octicon-mixins";
 
-atom-text-editor,
-atom-text-editor::shadow,
-:host {
+atom-text-editor, atom-text-editor::shadow, :host {
   .scroll-view {
     padding: 0;
   }
@@ -39,23 +37,17 @@ atom-text-editor::shadow,
 
   .gutter {
     font-weight: 300;
-    -webkit-font-smoothing: antialiased;
     background-color: @gutter-background-color;
-    margin-right: 0;
-    border-right: 0;
-    padding-right: 0;
 
     .line-numbers {
-      background: transparent !important;
+      background: @theme-background-color-dark;
     }
 
     .line-number {
-      background: transparent;
+      background: transparent; // @theme-background-color-dark;
       opacity: 1.0;
       color: @gutter-text-color;
       border-left: 2px solid transparent;
-      // padding-left: @component-padding !important;
-      padding-right: 0;
       width: inherit;
 
       &.git-line-added {
