@@ -1,0 +1,41 @@
+@import "ui-variables.less";
+@import "ui-mixins.less";
+
+linter-bottom-tab {
+  background: transparent;
+  border-color: @tab-border-color;
+  transition: color @transition-time ease, background @transition-time ease;
+
+  &:hover,
+  &.active {
+    color: @text-color-selected;
+    background: @tab-background-color-hover;
+  }
+
+  &:last-of-type {
+    margin-right: @component-padding;
+  }
+}
+
+linter-message {
+  padding: @component-padding/2 @component-padding;
+  font-size: @font-size;
+  line-height: 1.8em;
+}
+
+.linter-list {
+  padding-left: @component-padding;
+  padding-right: @component-padding;
+}
+
+linter-panel:empty {
+  display: none;
+}
+
+atom-text-editor, atom-text-editor::shadow, :host {
+  .gutter {
+    .linter-gutter {
+      border-radius: 100%;
+    }
+  }
+}
