@@ -4,12 +4,10 @@
 
 status-bar {
   .text(subtle);
-  background: @base-background-color;
-  background: @app-background-color !important;
+  background: @theme-background-color-dark !important;
   height: @status-bar-height;
   line-height: @component-line-height;
   font-size: @status-bar-font-size;
-  border-top: 1px solid @tool-panel-border-color;
 
   & > .flexbox-repaint-hack {
     padding-top: 3px;
@@ -48,7 +46,6 @@ status-bar {
 
     span {
       font-size: 11px;
-      text-transform: uppercase;
     }
   }
 }
@@ -154,6 +151,7 @@ kbd {
 }
 
 // input -----------------------------------------------------------------------
+
 atom-text-editor[mini],
 atom-text-editor[mini]::shadow {
   transition: all @transition-time ease;
@@ -165,11 +163,6 @@ atom-text-editor[mini]::shadow {
   height: @input-height;
   max-height: @input-height;
   line-height: @input-height - 2px;
-
-  &:hover {
-    border: 1px solid @input-border-color !important;
-    color: @text-color-highlight !important;
-  }
 
   .placeholder-text {
     .text(subtle);
@@ -188,13 +181,11 @@ atom-text-editor[mini]::shadow {
 
 atom-text-editor[mini].is-focused,
 atom-text-editor[mini].is-focused::shadow {
-  border: 1px solid @text-color-highlight;
   background-color: @input-background-color-active;
 
   &:hover {
-    border: 1px solid @text-color-highlight !important;
-    background-color: @input-background-color-active !important;
-    color: @text-color-highlight !important;
+    background-color: @input-background-color-active;
+    color: @text-color-highlight;
   }
 
   .selection .region {
