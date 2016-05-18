@@ -2,19 +2,6 @@
 @import "ui-mixins.less";
 @import "octicon-mixins";
 
-status-bar {
-  .text(subtle);
-
-  background: @theme-background-color-dark !important;
-  height: @status-bar-height;
-  line-height: @component-line-height;
-  font-size: @status-bar-font-size;
-
-  & > .flexbox-repaint-hack {
-    padding-top: 3px;
-  }
-}
-
 .platform-darwin .close-icon:before, .platform-darwin .icon-x:before, .platform-darwin .icon.x:before {
   content: '✕' !important;
 }
@@ -66,8 +53,7 @@ atom-notifications {
   }
 }
 
-.background-message .message,
-.background-message li {
+.background-message .message, .background-message li {
   .text(subtle);
   font-size: 24px;
 
@@ -96,7 +82,7 @@ kbd {
   border-radius: @component-border-radius;
 }
 
-// input -----------------------------------------------------------------------
+// input
 
 atom-text-editor[mini], atom-text-editor[mini]::shadow {
   transition: all @transition-time ease;

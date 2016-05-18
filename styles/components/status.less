@@ -1,0 +1,16 @@
+@import "ui-variables.less";
+@import "ui-mixins.less";
+@import "octicon-mixins";
+
+status-bar {
+  .text(subtle);
+
+  background: @theme-background-color-dark !important;
+  height: @status-bar-height;
+  line-height: @component-line-height;
+  font-size: @status-bar-font-size;
+
+  & > .flexbox-repaint-hack {
+    padding-top: 3px;
+  }
+}
