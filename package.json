@@ -1,7 +1,7 @@
 {
   "name": "string-theory",
   "theme": "ui",
-  "version": "0.0.4",
+  "version": "0.1.0",
   "description": "An Atom UI theme for people who appreciate minimalism. Based on ignism's Nucleus Dark UI.",
   "keywords": [
     "dark",
